@@ -1,7 +1,7 @@
 #include "stdio.h"
 #include "stdlib.h"
 
-int main(){
+int main(int argc, char *argv[]){
 
     FILE *file_ptr = fopen("saida.txt", "r");
 
@@ -14,9 +14,15 @@ int main(){
 
     char *buffer = malloc(f_size * sizeof(char));
 
-    fgets(buffer, f_size, file_ptr);
+    char *teste = fgets(buffer, f_size, file_ptr);
+    int lines = 0;
+    while(teste != NULL){
+        printf("%s\n", buffer);
+        teste = fgets(buffer, f_size, file_ptr);
+        lines++;
+    }
 
-    printf("%s\n", buffer);
+    printf("This file has: %d lines\n", lines);
 
     fclose(file_ptr);
 

@@ -12,7 +12,7 @@ int main(){
     fgets(buffer, len, stdin);
 
 
-    fprintf(file_ptr, "%s", buffer);
+    fprintf(file_ptr, "%s\n\n\nFILE_END", buffer);
 
 
     fclose(file_ptr);
