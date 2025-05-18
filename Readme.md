@@ -5,7 +5,7 @@
 5 - in progress
 6 - OK
 7 - OK
-8 - 
+8 - OK
 9 - 
 10 -
 11 - 
