@@ -9,7 +9,7 @@ int main(){
 
     int len = sizeof(buffer) / sizeof(char);
 
-    printf("Write something to be appended on the file");
+    printf("Write something to be appended on the file: ");
     fgets(buffer, len, stdin);
 
     fprintf(file_ptr, "\nThis will be appended to file:\n%s", buffer);
