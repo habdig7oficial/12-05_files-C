@@ -1,5 +1,7 @@
-gfyuiouicft678opuogfdty
+Lorem
 
 
 
 FILE_END
+This will be appended to file:
+Ipsum

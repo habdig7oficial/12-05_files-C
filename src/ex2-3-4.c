@@ -27,14 +27,18 @@ int main(int argc, char *argv[]){
 
     char *line = fgets(buffer, f_size, file_ptr);
     int lines = 0;
+
+    unsigned long words = strlen(buffer);
+
     while(line != NULL){
         printf("%s\n", buffer);
         fprintf(copy_ptr, "%s", buffer); // copy to another file
         line = fgets(buffer, f_size, file_ptr); // read each line of file
+        words += line != NULL? strlen(buffer) : 0;
         lines++;
     }
 
-    printf("This file has: %d lines\n", lines);
+    printf("This files has: %d characters \nThis file has: %d lines\n", f_size,lines);
 
     fclose(file_ptr);
     fclose(copy_ptr);
